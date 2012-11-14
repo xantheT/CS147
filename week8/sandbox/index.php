@@ -14,8 +14,9 @@
 
 	<script src="js/jquery-1.8.2.min.js"></script>
 	<script src="js/jquery.mobile-1.2.0.js"></script>
-
+	
 	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.css" />
+	<link href="css/ios_inspired/styles.css" rel="stylesheet" />
 	
 </head>
 
@@ -41,11 +42,7 @@
 		
 			
 		<!-- This is where the map gets inserted -->
-<<<<<<< HEAD
-		<div id="mapcanvas" style="height:315px;width:320px"></div>
-=======
 		<div id="mapcanvas2" style="height:315px;width:320px"></div>
->>>>>>> b5efc25e5d79699e13609e82bbf39bf85734b103
 		
 
 		<script type="text/javascript">
@@ -122,12 +119,8 @@
 		        },
 		        mapTypeId: google.maps.MapTypeId.ROADMAP
 		    };
-		
-<<<<<<< HEAD
-		    map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
-=======
+		    
 		    map = new google.maps.Map(document.getElementById("mapcanvas2"), myOptions);
->>>>>>> b5efc25e5d79699e13609e82bbf39bf85734b103
 		
 		    var marker = new google.maps.Marker({
 		        position: latlng,
@@ -198,7 +191,9 @@
 		    navigator.geolocation.getCurrentPosition(success, error);
 		} else {
 		    error('not supported');
-		}		
+		}	
+		
+	
 		</script> 
 
 		
@@ -208,9 +203,9 @@
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
-			<li><a href="wtf.html" id="home" data-icon="custom">Home</a></li>
-			<li><a href="map.html" id="key" class="ui-btn-active" data-icon="custom">WTF</a></li>
-			<li><a href="index.html" id="map"  data-icon="custom">Map</a></li>
+			<li><a href="overlay.html" id="home" data-icon="custom">Overlay</a></li>
+			<li><a href="hello.html" id="key" data-icon="custom">Hello</a></li>
+			<li><a href="index.php" id="map" class="ui-btn-active" data-icon="custom">Map</a></li>
 			
 		</ul>
 		</div>

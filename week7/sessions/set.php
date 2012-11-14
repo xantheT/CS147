@@ -31,14 +31,18 @@ session_start();
 	
 	<div data-role="content">	
 	
+<<<<<<< HEAD
 
 		<!---    Get the session stuff out again! -->
+=======
+>>>>>>> b5efc25e5d79699e13609e82bbf39bf85734b103
 		<?php 
 		if (isset($_POST["username"])) {
 			$_SESSION["username"] = $_POST["username"];
 		}
 		echo "<p>We set the session username set to: ".$_SESSION["username"]."</p>";
 		?>	
+<<<<<<< HEAD
 
 		<!-- Local storage !!!  -->	
 		<script type="text/javascript">
@@ -47,6 +51,15 @@ session_start();
 					localStorage.setItem('username', '<?=$_SESSION["username"];?>');   /*save thing under key 'username'*/
 					alert("We set local storage username to: " + localStorage.getItem('username')); 
 					$("#filter2").find("#home").attr("href", "index.php?username="+localStorage.getItem('username')); /* get item, lives in browser*/
+=======
+			
+		<script type="text/javascript">
+				$("#filter2").unbind('pageinit');
+				$("#filter2").bind( 'pageinit',function(event){ 
+					localStorage.setItem('username', '<?=$_SESSION["username"];?>');
+					alert("We set local storage username to: " + localStorage.getItem('username'));
+					$("#filter2").find("#home").attr("href", "index.php?username="+localStorage.getItem('username'));
+>>>>>>> b5efc25e5d79699e13609e82bbf39bf85734b103
 			});
 		</script>
 			
